@@ -1,22 +1,23 @@
-# Groq CLI – Simple & Fast AI from Your Computer
+# Groq Terminal – Simple & Fast AI from Your Computer
 
-This project lets you ask questions to **Groq AI models** using a small script.
+Groq Terminal is a small open-source tool that lets you ask questions to
+**Groq AI models** directly from your computer.
 
-You don’t need to be a programmer.  
+No programming skills required.  
 You can start directly from **your browser**.
 
 ---
 
 ## ❓ What is this?
 
-This is a very simple tool that allows you to:
+Groq Terminal allows you to:
 
 - Ask questions to Groq AI
-- Get fast answers
-- Use it on your own computer
+- Get very fast answers
+- Run everything locally
 - Keep your API key private
 
-Nothing is installed automatically.  
+Nothing runs automatically.  
 You are always in control.
 
 ---
@@ -28,13 +29,11 @@ You are always in control.
 - A **Groq account**
 - A **Groq API key**
 
-That’s all.
-
 ---
 
 ## 🔑 Step 1: Get your Groq API Key (Browser only)
 
-1. Open the **Groq website**
+1. Open the Groq website
 2. Create an account or log in
 3. Go to **API Keys**
 4. Click **Create new key**
@@ -43,7 +42,6 @@ That’s all.
 ⚠️ **Important**
 - Do NOT share your API key
 - Do NOT upload it to GitHub
-- Every user must create their own key
 
 ---
 
@@ -57,72 +55,58 @@ You will see files like:
 - `groq`
 - `groq.sh`
 - `groq_debug.sh`
+- `install.sh`
 
 ---
 
-## ⚙️ Step 3: Set your API key (one simple command)
+## 🚀 Easy Install (Recommended)
 
-You do NOT need to edit any file.
-
-1. Open **Terminal**
-2. Copy and paste this (replace with your key):
+If you want to install the `groq` command automatically, run this **one command**:
 
 ```bash
+curl -fsSL https://raw.githubusercontent.com/aetfukc/groq-terminal/main/install.sh | bash
+
+This will install the groq command on your system.
+⚙️ Step 3: Set your API key
+
+Open Terminal and run:
+
 export GROQ_API_KEY="your_api_key_here"
 
 This is required once per session.
-▶️ Step 4: Use the tool (Easy)
+▶️ Step 4: Use Groq Terminal
 
-    Open Terminal
+After installation, you can run:
 
-    Go inside the downloaded folder
+groq "Explain artificial intelligence in one sentence"
 
-    Run:
-
-./groq.sh "Explain artificial intelligence in one sentence"
-
-✅ The answer will:
+The answer will:
 
     appear on screen
 
-    be copied to your clipboard automatically
+    be copied to your clipboard (if supported)
 
-You can paste it anywhere.
 🧪 Debug Mode (Optional)
 
-If you want to see technical details:
+To see the full API response:
 
 ./groq_debug.sh "What model are you?"
 
-This prints the full API response.
-🚀 Optional: Use it like a normal app
-
-If you want to type:
-
-groq "Hello"
-
-instead of ./groq.sh, do this once:
-
-chmod +x groq
-sudo mv groq /usr/local/bin/
-
-After that, you can use groq from anywhere.
 📂 Files explained
-File	What it does
-groq	Main command (installable)
-groq.sh	Normal script
-groq_debug.sh	Debug version
-.env.example	Example API key file
+File	Description
+groq	Main installable command
+groq.sh	Simple script version
+groq_debug.sh	Debug / raw JSON output
+install.sh	One-line installer
+.env.example	API key example
 .gitignore	Keeps secrets safe
-🔒 Security Notes (Very Important)
+🔒 Security Notes
 
-    ❌ Never upload your API key to GitHub
+    Never upload your API key to GitHub
 
-    ❌ Never paste your API key in comments or issues
+    Never paste your API key in issues or comments
 
-    ✅ This project does NOT contain any API key
-
-    ✅ Your key stays on your computer
+    This repository does NOT contain any API keys
 
 ❓ FAQ
 
@@ -130,17 +114,12 @@ Do I need programming skills?
 No.
 
 Does this install anything automatically?
-No. You run everything manually.
+Only if you run the installer yourself.
 
-Can I delete it later?
-Yes. Just delete the files.
-
-Is this official Groq software?
-No. This is an independent open-source project.
-
-✅ You’re done!
+Can I remove it later?
+Yes. Delete /usr/local/bin/groq.
 
 You are now using Groq AI directly from your computer
 in a simple and safe way 🚀
 
-Feel free to share or fork this project.
+Feel free to fork, share, or improve this project.
